@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matthew (Yi-Chen) Lee — Portfolio</title>
+  <meta name="description" content="Matthew Lee — recent Physics B.S. (NTU, 2025). Research in ML theory, reliable AI, and medical AI. Seeking Master's/PhD opportunities." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0c0f; --card:#12141a; --muted:#a0a8b8; --fg:#e7ecf5; --brand:#8ab4ff; --accent:#9ef0a1; --ring:#2a6afc;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    [data-theme="light"]{ --bg:#f7f8fb; --card:#ffffff; --muted:#5c667a; --fg:#0b0c0f; --brand:#2457ff; --accent:#0ea5e9; --ring:#2457ff; }
+    body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    .nav{position:sticky;top:0;background:color-mix(in oklab, var(--bg), #000 20%);backdrop-filter:saturate(120%) blur(10px);z-index:50;border-bottom:1px solid color-mix(in oklab, var(--fg), transparent 92%)}
+    .nav .inner{display:flex;align-items:center;gap:10px;max-width:1100px;margin:0 auto;padding:10px 24px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1px solid color-mix(in oklab, var(--fg), transparent 85%);background:transparent;color:var(--fg);cursor:pointer;text-decoration:none}
+    .btn.primary{background:var(--brand);color:#fff;border-color:transparent;box-shadow:var(--shadow)}
+    .grid{display:grid;gap:20px}
+    @media (min-width:900px){.grid.hero{grid-template-columns:1.6fr 1fr}}
+    .card{background:var(--card);border:1px solid color-mix(in oklab, var(--fg), transparent 90%);border-radius:18px;box-shadow:var(--shadow)}
+    .pill{display:inline-flex;align-items:center;gap:6px;border:1px solid color-mix(in oklab, var(--fg), transparent 85%);padding:4px 10px;border-radius:999px;color:var(--muted);font-size:.85rem}
+    .muted{color:var(--muted)}
+    .title{font-size:clamp(28px,4.5vw,44px);line-height:1.15;margin:.2rem 0}
+    .subtitle{color:var(--muted);margin:.4rem 0 1rem}
+    .section h2{font-size:clamp(22px,3.6vw,30px);margin:6px 0 10px}
+    .row{display:flex;flex-wrap:wrap;gap:10px}
+    .exp{padding:14px 16px}
+    .exp h4{margin:.2rem 0;font-size:1rem}
+    .exp .meta{display:flex;flex-wrap:wrap;gap:10px;font-size:.9rem;color:var(--muted)}
+    .list{display:grid;gap:14px}
+    @media(min-width:760px){.list.cols-2{grid-template-columns:1fr 1fr}}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{padding:3px 10px;border-radius:999px;background:color-mix(in oklab, var(--brand), transparent 85%);color:var(--fg);border:1px solid color-mix(in oklab, var(--brand), transparent 60%)}
+    .footer{padding:24px}
+    .photo-card{display:block;overflow:hidden;border-radius:18px;border:1px solid color-mix(in oklab, var(--fg), transparent 90%);box-shadow:var(--shadow);background:var(--card)}
+    .photo-card img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+    .socials .btn{font-size:.9rem}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="inner">
+      <strong>Matthew Lee</strong>
+      <nav class="row" style="gap:6px;margin-left:10px">
+        <a class="btn" href="#publications">Publications</a>
+        <a class="btn" href="#experience">Experience</a>
+        <a class="btn" href="#contact">Contact</a>
+      </nav>
+      <span style="flex:1 1 auto"></span>
+      <button class="btn" id="themeBtn">Night Mode</button>
+      <a class="btn" href="Matthew_Lee_Resume.pdf" download>Resume</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="grid hero" id="home" style="margin-top:18px">
+      <div>
+        <h1 class="title">Matthew (Yi-Chen) Lee</h1>
+        <div class="pill">Undergraduate graduate · Seeking Master's/PhD opportunities</div>
+        <p class="subtitle">I recently received my B.S. in Physics from National Taiwan University (2025) and am currently conducting research in machine learning theory, interpretable AI, and AI for Healthcare. I am eager to further deepen my studies and pursue a Ph.D. in the future.</p>
+        <div class="row socials">
+          <a class="btn primary" href="mailto:b10202055@ntu.edu.tw">✉️ Email</a>
+          <a class="btn" href="https://scholar.google.com/citations?user=jf-e29IAAAAJ&hl=en" target="_blank" rel="noreferrer">📚 Google Scholar</a>
+          <a class="btn" href="https://www.linkedin.com/in/matthew-lee-59b397259/" target="_blank" rel="noreferrer">🔗 LinkedIn</a>
+        </div>
+      </div>
+
+      <!-- Headshot on the right -->
+      <aside class="photo-card">
+        <!-- Put your photo file in the same folder and name it 'matthew.jpg' -->
+        <img src="matthew.jpg" alt="Portrait of Matthew (Yi-Chen) Lee">
+      </aside>
+    </section>
+
+    <!-- Publications (above Experience) -->
+    <section class="section" id="publications" style="margin-top:24px">
+      <h2>Publications</h2>
+      <div id="pubList" class="list cols-2"></div>
+    </section>
+
+    <section class="section" id="experience" style="margin-top:28px">
+      <h2>Experience</h2>
+      <div id="expList" class="list"></div>
+    </section>
+
+    <section class="section card footer" id="contact" style="margin-top:28px">
+      <h2>Get in touch</h2>
+      <p class="muted">Open to collaboration, research assistantships, and graduate opportunities.</p>
+      <div class="row" style="margin-top:8px">
+        <a class="btn primary" href="mailto:b10202055@ntu.edu.tw">Email Matthew</a>
+        <a class="btn" href="https://scholar.google.com/citations?user=jf-e29IAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+        <a class="btn" href="https://www.linkedin.com/in/matthew-lee-59b397259/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+      <p class="muted" style="margin-top:18px">© <span id="year"></span> Matthew (Yi-Chen) Lee</p>
+    </section>
+  </main>
+
+  <script>
+    // Theme toggle
+    const root = document.documentElement;
+    const themeBtn = document.getElementById('themeBtn');
+    function setTheme(mode){ root.setAttribute('data-theme', mode); localStorage.setItem('theme', mode); }
+    setTheme(localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: light)').matches ? 'light':'dark'));
+    themeBtn.onclick = () => setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark');
+
+    // Publications data (no years/citation bubbles; tags updated)
+    const PUBLICATIONS = [
+      {title:'On Statistical Rates of Conditional Diffusion Transformers: Approximation, Estimation and Minimax Optimality',
+       venue:'ICLR 2025',
+       authors:['Jerry Y. H.*','Weimin W.*','Yi-Chen L.*','Yu-Chao H.*','Minshuo C.','Han L.'],
+       tags:['Diffusion model','Transformers','Statistical theory'],
+       abstract:'We study conditional diffusion transformers and establish approximation, estimation, and minimax optimality rates.'},
+
+      {title:'High-Order Flow Matching: Unified Framework and Sharp Statistical Rates',
+       venue:'NeurIPS 2025 (under review)',
+       authors:['Maojiang S.*','Jerry Y. H.*','Yi-Chen L.*','Ning Z.','Jui-Hui C.','Shang W.','Zhao S.','Minshuo C.','Han L.'],
+       tags:['Flow model','Transformers','Statistical theory'],
+       abstract:'We provide a unified high-order flow-matching framework that leverages trajectory derivatives to achieve sharp rates.'},
+
+      {title:'Binary Regression: Universal Ising Model, Binary Expansion and Beyond',
+       venue:'NeurIPS 2025 (under review)',
+       authors:['Jerry Y. H.*','Yi-Chen L.','Hude L.','En-Jui K.','Han L.'],
+       tags:['Interpretable model','Ising model','Binary regression'],
+       abstract:'We cast statistical models into binary regression with universal Ising interpretation and tractable linear effects.'},
+
+      {title:'MRI-only Pre-planning for HDR Gyn Interstitial Brachytherapy using Deep Learning',
+       venue:'Phys. Med. Biol. (under review)',
+       authors:['Yi-Chen L.','Sang K. Y.','Ethan S.','Yingzi L.','Zhen T.','Tianming W.','Yasmin H.','James J. S.'],
+       tags:['Medical AI','Radiation oncology','MR-only pre-planning'],
+       abstract:'An MRI-only pre-planning framework combining rule-based filtering, deep RL (Dueling DQN), and ILP to aid needle selection.'}
+    ];
+
+    function renderPubs(){
+      const list = document.getElementById('pubList'); list.innerHTML='';
+      PUBLICATIONS.forEach(p=>{
+        const item = document.createElement('article'); item.className='card exp';
+        item.innerHTML = `
+          <h4>${p.title} <span class="pill">${p.venue}</span></h4>
+          <div class="muted">${p.authors.join(', ')}</div>
+          <p class="abstract">${p.abstract}</p>
+          <div class="tags">${p.tags.map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
+        `;
+        list.appendChild(item);
+      });
+    }
+    renderPubs();
+
+    // Experience data (kept simple)
+    const EXPERIENCES = [
+      {title:'Research Assistant', org:'University of Chicago (Prof. James J. Sohn)', where:'Chicago, IL', from:'Jan 2025', to:'Present', bullets:[
+        'Built a hybrid deep learning pipeline for MRI-only pre-planning in HDR gyn interstitial brachytherapy.',
+        'Two-stage hierarchy: rule-based filtering → Dueling DQN that proposes ILP constraints for needle planning.',
+        'Validated against expert plans: ~89% sensitivity with ~0.60 false positives per case.'
+      ]},
+      {title:'Research Assistant', org:'Northwestern University (Prof. Han Liu)', where:'Evanston, IL', from:'Apr 2023', to:'Present', bullets:[
+        'Co-first author: conditional diffusion transformers — approximation, estimation, minimax rates (ICLR 2025).',
+        'Unified high-order flow matching framework with sharp statistical rates (under review at NeurIPS 2025).',
+        'Proposed interpretable binary-regression view with universal Ising model (under review at NeurIPS 2025).'
+      ]}
+    ];
+
+    const EDUCATION = [{ school:'National Taiwan University', place:'Taipei, Taiwan', degree:'B.S. in Physics', when:'June 2025' }];
+
+    function renderExp(){
+      const expList = document.getElementById('expList'); expList.innerHTML='';
+      EXPERIENCES.forEach(e=>{
+        const el = document.createElement('article'); el.className = 'card exp';
+        el.innerHTML = `
+          <h4>${e.title}</h4>
+          <div class="meta"> <span>${e.org}</span> • <span>${e.where}</span> • <span>${e.from} – ${e.to}</span></div>
+          <ul>${e.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>
+        `; expList.appendChild(el);
+      });
+      EDUCATION.forEach(ed=>{
+        const edEl=document.createElement('article'); edEl.className='card exp';
+        edEl.innerHTML = `<h4>Education</h4><div class="meta"><span>${ed.school}</span> • <span>${ed.place}</span> • <span>${ed.degree}</span> • <span>${ed.when}</span></div>`;
+        expList.appendChild(edEl);
+      });
+    }
+    renderExp();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
