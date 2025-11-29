@@ -170,7 +170,7 @@
         const item = document.createElement('article');
         item.className='card exp';
         item.innerHTML = `
-          <h4>${p.title} <span class="pill">${p.venue}</span></h4>
+          <h4>${p.title}</h4>
           <div class="muted">${p.authors.join(', ')}</div>
           <p class="abstract">${p.abstract}</p>
           <div class="tags">${p.tags.map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
